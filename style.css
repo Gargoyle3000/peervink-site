@@ -701,4 +701,16 @@ font-size: clamp(38px, 4vw, 66px);  line-height: 1;
     margin-top: 46px !important;
     font-size: 16px !important;
   }
+}/* force mobile home font */
+@media (max-width: 700px) {
+  .simple-home-page,
+  .simple-home,
+  .home-menu,
+  .home-menu a,
+  .home-contact,
+  .home-contact span,
+  .home-contact a {
+    font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif !important;
+    font-weight: 200 !important;
+  }
 }
