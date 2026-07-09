@@ -875,3 +875,32 @@ body {
 .chain-middle {
   display: none !important;
 }
+/* STUDIO DUMP — GREEN BACKGROUND TEST */
+
+.dump-page {
+  background: #00D422 !important;
+}
+
+.dump-page .dump-stage {
+  background: transparent !important;
+}
+
+.dump-page .dump-grid {
+  background: transparent !important;
+}
+
+.dump-page .dump-item {
+  background: #00D422 !important;
+}
+
+.dump-page .back-link {
+  color: black !important;
+}
+
+.dump-page .back-link:hover,
+.dump-page .back-link:focus-visible {
+  color: white !important;
+}
+.dump-page .dump-item {
+  background: #00D422 !important;
+}
