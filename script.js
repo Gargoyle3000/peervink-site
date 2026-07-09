@@ -49,3 +49,34 @@ document.addEventListener("mouseleave", () => {
   if (!customCursor) return;
   customCursor.classList.remove("is-visible");
 });
+// Studio Dump working chains
+const chainLayer = document.querySelector(".chain-layer");
+
+if (chainLayer) {
+  let ticking = false;
+
+  function updateWorkingChains() {
+    const scrollY = window.scrollY;
+
+    document.documentElement.style.setProperty(
+      "--chain-side-y",
+      `${scrollY * -0.45}px`
+    );
+
+    document.documentElement.style.setProperty(
+      "--chain-middle-y",
+      `${scrollY * 0.45}px`
+    );
+
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateWorkingChains);
+      ticking = true;
+    }
+  });
+
+  updateWorkingChains();
+}

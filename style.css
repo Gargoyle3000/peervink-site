@@ -584,3 +584,266 @@ body {
     font-size: 38px;
   }
 }
+/* STUDIO DUMP RIGID GRID */
+
+.dump-page {
+  background: white;
+}
+
+.dump-page .dump-background-gif {
+  display: none;
+}
+
+.dump-page .dump-stage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 32px 32px;
+}
+
+.dump-page .dump-header {
+  display: none;
+}
+
+.dump-page .dump-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.dump-page .dump-item {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  grid-column: auto !important;
+  grid-row: auto !important;
+  align-self: auto !important;
+  justify-self: auto !important;
+
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.dump-page .dump-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .dump-page .dump-stage {
+    padding: 70px 22px 22px;
+  }
+
+  .dump-page .dump-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+}
+
+/* phone */
+@media (max-width: 600px) {
+  .dump-page .dump-stage {
+    padding: 64px 14px 14px;
+  }
+
+  .dump-page .dump-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+/* STUDIO DUMP — SMALLER CENTERED GRID OVERRIDE */
+
+.dump-page .dump-stage {
+  padding: 80px 48px 48px;
+}
+
+.dump-page .dump-grid {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.dump-page .dump-item {
+  aspect-ratio: 1 / 1;
+  background: white;
+}
+
+.dump-page .dump-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+/* BACK LINK ABOVE STUDIO DUMP GRID */
+
+.dump-page .back-link {
+  position: fixed !important;
+  left: 36px !important;
+  top: 36px !important;
+  z-index: 999999 !important;
+
+  color: black !important;
+  text-decoration: none !important;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif !important;
+  font-weight: 200 !important;
+}
+
+.dump-page .back-link:hover,
+.dump-page .back-link:focus-visible {
+  color: #00D422 !important;
+}
+
+.dump-page .dump-grid,
+.dump-page .dump-item,
+.dump-page .dump-item img {
+  position: relative;
+  z-index: 1;
+}
+/* STUDIO DUMP WORKING CHAINS — BEHIND GRID */
+
+.dump-page {
+  position: relative;
+  isolation: isolate;
+  background: white;
+}
+
+.chain-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scroll-chain {
+  position: absolute;
+  top: -10vh;
+  bottom: -10vh;
+
+  width: 110px;
+
+  background-image: url("assets/chains/chain.png");
+  background-repeat: repeat-y;
+  background-position-x: center;
+  background-position-y: var(--chain-side-y, 0px);
+  background-size: 86px auto;
+
+  opacity: 0.85;
+  will-change: background-position;
+}
+
+.chain-left {
+  left: 10vw;
+}
+
+.chain-middle {
+  left: 50%;
+  transform: translateX(-50%);
+  background-position-y: var(--chain-middle-y, 0px);
+}
+
+.chain-right {
+  right: 10vw;
+}
+
+/* grid stays in front of chains */
+.dump-page .dump-stage {
+  position: relative;
+  z-index: 2;
+}
+
+.dump-page .dump-grid {
+  position: relative;
+  z-index: 3;
+}
+
+/* back stays above everything */
+.dump-page .back-link {
+  z-index: 999999 !important;
+}
+
+/* phone */
+@media (max-width: 700px) {
+  .scroll-chain {
+    width: 70px;
+    background-size: 56px auto;
+    opacity: 0.65;
+  }
+
+  .chain-left {
+    left: 4vw;
+  }
+
+  .chain-right {
+    right: 4vw;
+  }
+}
+/* STUDIO DUMP — BIG BACKGROUND CHAINS */
+
+.chain-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0 !important;
+  pointer-events: none;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+.scroll-chain {
+  position: absolute;
+  top: -50vh;
+  bottom: -50vh;
+
+  width: 520px;
+
+  background-image: url("assets/chains/chain.png");
+  background-repeat: repeat-y;
+  background-position-x: center;
+  background-size: 520px auto;
+
+  opacity: 0.75;
+  outline: none !important;
+  background-color: transparent !important;
+
+  will-change: background-position;
+}
+
+.chain-left {
+  left: -90px;
+  background-position-y: var(--chain-side-y, 0px);
+}
+
+.chain-middle {
+  left: 50%;
+  transform: translateX(-50%);
+  background-position-y: var(--chain-middle-y, 0px);
+}
+
+.chain-right {
+  right: -90px;
+  background-position-y: var(--chain-side-y, 0px);
+}
+
+/* photos stay in front */
+.dump-page .dump-stage {
+  position: relative;
+  z-index: 2;
+}
+
+.dump-page .dump-grid {
+  position: relative;
+  z-index: 3;
+}
+
+.dump-page .back-link {
+  z-index: 999999 !important;
+}
