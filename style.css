@@ -1,0 +1,608 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: white;
+  color: black;
+}
+
+.intro-page {
+  min-height: 100vh;
+}
+
+.intro {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.intro-poster {
+  position: relative;
+  width: min(78vw, 620px);
+}
+
+.intro-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.enter-link {
+  position: absolute;
+  left: 50%;
+  bottom: 18.8%;
+  transform: translateX(-50%);
+
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+font-size: clamp(38px, 4vw, 66px);  line-height: 1;
+  letter-spacing: 0;
+
+  color: #000000;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: color 120ms ease;
+}
+
+.enter-link:hover,
+.enter-link:focus-visible,
+.enter-link:active {
+  color: #00D422;
+}
+
+.enter-link:focus-visible {
+  outline: 2px solid #00D422;
+  outline-offset: 8px;
+}
+
+@media (max-height: 850px) {
+  .intro {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .intro-poster {
+    width: min(72vw, 540px);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none !important;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 96px;
+    height: 96px;
+
+    pointer-events: none;
+    z-index: 9999;
+
+    background-image: url("assets/cursors/horse-gallop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleX(1);
+
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+  }
+
+  .custom-cursor.is-visible {
+    opacity: 1;
+  }
+
+  .custom-cursor.is-clicking {
+    background-image: url("assets/cursors/horse-rearing.png");
+  }
+
+  .custom-cursor.facing-left {
+    transform: translate(-50%, -50%) scaleX(-1);
+  }
+.simple-home-page {
+  min-height: 100vh;
+  background: white;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.simple-home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-menu a,
+.home-contact a {
+  color: black;
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+.home-menu a {
+  font-size: clamp(34px, 4vw, 64px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.home-menu a:hover,
+.home-menu a:focus-visible,
+.home-contact a:hover,
+.home-contact a:focus-visible {
+  color: #00D422;
+}
+
+.home-contact {
+  margin-top: 110px;
+  font-size: clamp(18px, 1.5vw, 24px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.home-contact span {
+  margin-right: 6px;
+}
+.content-page {
+  min-height: 100vh;
+  background: white;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.content-stage {
+  min-height: 100vh;
+  padding: 36px;
+}
+
+.back-link {
+  position: fixed;
+  left: 36px;
+  top: 36px;
+  z-index: 2000;
+
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 200;
+  transition: color 120ms ease;
+}
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: #00D422;
+}
+
+.content-stage h1 {
+  margin: 140px 0 0;
+  text-align: center;
+  font-size: clamp(42px, 5vw, 82px);
+  line-height: 1;
+  font-weight: 200;
+}
+.project-list {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-list a {
+  color: black;
+  text-decoration: none;
+
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: clamp(42px, 5vw, 86px);
+  line-height: 1;
+
+  transition: color 120ms ease;
+}
+
+.project-list a:hover,
+.project-list a:focus-visible {
+  color: #00D422;
+}
+.project-page {
+  min-height: 100vh;
+  background: white;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.project-stage {
+  min-height: 100vh;
+  padding: 36px;
+}
+
+.project-header {
+  margin: 120px auto 100px;
+  text-align: center;
+}
+
+.project-header h1 {
+  margin: 0;
+  font-size: clamp(48px, 6vw, 100px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.project-header p {
+  margin: 18px 0 0;
+  font-size: clamp(18px, 1.6vw, 26px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.project-images {
+  width: min(82vw, 980px);
+  margin: 0 auto 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.project-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cv-page {
+  min-height: 100vh;
+  background: white;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.cv-stage {
+  max-width: 860px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 36px 36px 120px;
+}
+
+.cv-header {
+  margin: 120px 0 90px;
+  text-align: center;
+}
+
+.cv-header h1 {
+  margin: 0 0 36px;
+  font-size: clamp(52px, 7vw, 120px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.cv-header p {
+  margin: 0;
+  font-size: clamp(18px, 1.6vw, 26px);
+  line-height: 1.35;
+  font-weight: 200;
+}
+
+.cv-section {
+  margin-top: 72px;
+}
+
+.cv-section h2 {
+  margin: 0 0 24px;
+  font-size: clamp(24px, 2.4vw, 38px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.cv-section p {
+  margin: 0 0 12px;
+  font-size: clamp(17px, 1.4vw, 22px);
+  line-height: 1.35;
+  font-weight: 200;
+}
+
+.cv-section a {
+  color: black;
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+.cv-section a:hover,
+.cv-section a:focus-visible {
+  color: #00D422;
+}
+.cv-page {
+  min-height: 100vh;
+  background: white;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.cv-stage {
+  max-width: 980px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 36px 36px 140px;
+}
+
+.cv-header {
+  margin: 120px 0 110px;
+  text-align: center;
+}
+
+.cv-header h1 {
+  margin: 0 0 38px;
+  color: black;
+  font-size: clamp(56px, 7vw, 128px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.cv-header p {
+  margin: 0;
+  color: #00D422;
+  font-size: clamp(18px, 1.6vw, 26px);
+  line-height: 1.35;
+  font-weight: 200;
+}
+
+.cv-section {
+  margin-top: 84px;
+}
+
+.cv-section h2 {
+  margin: 0 0 24px;
+  color: black;
+  font-size: clamp(25px, 2.2vw, 38px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.cv-section p {
+  margin: 0 0 12px;
+  color: #00D422;
+  font-size: clamp(17px, 1.28vw, 21px);
+  line-height: 1.38;
+  font-weight: 200;
+}
+
+.cv-section a {
+  color: #00D422;
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+.cv-section a:hover,
+.cv-section a:focus-visible {
+  color: black;
+}
+.dump-page {
+  min-height: 100vh;
+  background: white;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.dump-stage {
+  min-height: 100vh;
+  padding: 36px 36px 160px;
+}
+
+.dump-header {
+  margin: 70px 0 70px;
+  text-align: center;
+}
+
+.dump-header h1 {
+  margin: 0;
+  color: black;
+  font-size: clamp(46px, 6vw, 110px);
+  line-height: 1;
+  font-weight: 200;
+}
+
+.dump-grid {
+  width: min(98vw, 1680px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  column-gap: 28px;
+  row-gap: 58px;
+  align-items: start;
+
+  grid-auto-flow: dense;
+}
+
+.dump-item {
+  margin: 0;
+}
+
+.dump-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 430px;
+  object-fit: contain;
+}
+
+/* brede, gecontroleerde collage-layout */
+.dump-layout-1 {
+  grid-column: 1 / span 4;
+  justify-self: start;
+}
+
+.dump-layout-2 {
+  grid-column: 6 / span 4;
+  justify-self: center;
+  margin-top: 55px;
+}
+
+.dump-layout-3 {
+  grid-column: 12 / span 4;
+  justify-self: end;
+  margin-top: 10px;
+}
+
+.dump-layout-4 {
+  grid-column: 3 / span 4;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.dump-layout-5 {
+  grid-column: 8 / span 5;
+  justify-self: center;
+  margin-top: -10px;
+}
+
+.dump-layout-6 {
+  grid-column: 13 / span 4;
+  justify-self: end;
+  margin-top: 45px;
+}
+
+.dump-layout-7 {
+  grid-column: 1 / span 5;
+  justify-self: start;
+  margin-top: 20px;
+}
+
+.dump-layout-8 {
+  grid-column: 9 / span 4;
+  justify-self: center;
+  margin-top: 60px;
+}
+.dump-stage {
+  position: relative;
+}
+
+.dump-background-gif {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0.65;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dump-stage > *:not(.dump-background-gif) {
+  position: relative;
+  z-index: 1;
+}
+/* fixed back link override */
+.back-link {
+  position: fixed !important;
+  left: 36px !important;
+  top: 36px !important;
+  z-index: 9998 !important;
+
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 200;
+  transition: color 120ms ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: #00D422;
+}
+.dump-clickable-image {
+  cursor: none;
+}
+
+.dump-clickable-image:focus {
+  outline: none;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 56px;
+  background: rgba(255, 255, 255, 0.72);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.image-lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-image {
+  display: block;
+  max-width: 86vw;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: fixed;
+  right: 36px;
+  top: 28px;
+  z-index: 9001;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+
+  color: black;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 200;
+
+  cursor: none;
+  transition: color 120ms ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  color: #00D422;
+}
