@@ -25,7 +25,6 @@ window.studioDumpImages = [
   "assets/studio-dump/09-pxl-20260224-154208331.webp",
   "assets/studio-dump/08-pxl-20260224-104121164.webp",
   "assets/studio-dump/07-pxl-20260223-212322523.webp",
-  "assets/studio-dump/06-pxl-20260223-181436894.webp",
   "assets/studio-dump/05-pxl-20260209-174310788.webp",
   "assets/studio-dump/04-pxl-20260209-170332657.webp",
   "assets/studio-dump/03-pxl-20260130-185505578-long-exposure-01-cover.webp",
