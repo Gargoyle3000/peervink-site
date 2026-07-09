@@ -638,3 +638,67 @@ font-size: clamp(38px, 4vw, 66px);  line-height: 1;
     margin-bottom: 8px;
   }
 }
+/* mobile home page override */
+@media (max-width: 700px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .simple-home-page {
+    min-height: 100svh;
+  }
+
+  .simple-home {
+    min-height: 100svh;
+    padding: 28px 18px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-menu {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .home-menu a {
+    font-size: clamp(38px, 12vw, 58px) !important;
+    line-height: 0.95;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .home-contact {
+    margin-top: 64px !important;
+    max-width: 90vw;
+    font-size: clamp(16px, 4.4vw, 20px) !important;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .home-contact span,
+  .home-contact a {
+    display: block;
+  }
+
+  .home-contact span {
+    margin-right: 0;
+    margin-bottom: 7px;
+  }
+
+  .home-contact a {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* extra compact phones / low browser height */
+@media (max-width: 700px) and (max-height: 740px) {
+  .home-menu a {
+    font-size: clamp(32px, 10.5vw, 48px) !important;
+  }
+
+  .home-contact {
+    margin-top: 46px !important;
+    font-size: 16px !important;
+  }
+}
