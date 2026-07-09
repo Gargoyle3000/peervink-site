@@ -847,3 +847,31 @@ body {
 .dump-page .back-link {
   z-index: 999999 !important;
 }
+/* STUDIO DUMP — TWO SIDE CHAINS */
+
+.chain-middle {
+  display: none !important;
+}
+
+.chain-left {
+  left: -180px;
+  background-position-y: var(--chain-left-y, 0px);
+}
+
+.chain-right {
+  right: -180px;
+  background-position-y: var(--chain-right-y, 0px);
+}
+/* STUDIO DUMP — MOVING SIDE CHAINS FIX */
+
+.chain-left {
+  background-position-y: var(--chain-left-y, 0px) !important;
+}
+
+.chain-right {
+  background-position-y: var(--chain-right-y, 0px) !important;
+}
+
+.chain-middle {
+  display: none !important;
+}

@@ -16,7 +16,6 @@
 <body class="dump-page">
   <div class="chain-layer" aria-hidden="true">
   <div class="scroll-chain chain-left"></div>
-  <div class="scroll-chain chain-middle"></div>
   <div class="scroll-chain chain-right"></div>
 </div>
  <main class="dump-stage">
@@ -38,5 +37,31 @@
   <script src="studio-dump-data.js"></script>
 <script src="studio-dump-render.js"></script>
 <script src="script.js"></script>
+<script>
+  (function () {
+    const layer = document.querySelector(".chain-layer");
+
+    if (!layer) return;
+
+    function moveChains() {
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      document.documentElement.style.setProperty(
+        "--chain-left-y",
+        `${scrollY * -0.55}px`
+      );
+
+      document.documentElement.style.setProperty(
+        "--chain-right-y",
+        `${scrollY * 0.55}px`
+      );
+    }
+
+    window.addEventListener("scroll", moveChains, { passive: true });
+    window.addEventListener("resize", moveChains);
+
+    moveChains();
+  })();
+</script>
 </body>
 </html>
