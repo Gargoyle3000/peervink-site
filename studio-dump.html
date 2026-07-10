@@ -29,7 +29,10 @@
 
 <section class="dump-grid" aria-label="Studio Dump images"></section>
 </main>
-
+<div class="image-lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Sluit afbeelding">×</button>
+  <img class="lightbox-image" src="" alt="">
+</div>
 
 
 <div class="custom-cursor"></div>
@@ -37,6 +40,61 @@
   <script src="studio-dump-data.js"></script>
 <script src="studio-dump-render.js"></script>
 <script src="script.js"></script>
+<script>
+  (function () {
+    const grid = document.querySelector(".dump-grid");
+    const lightbox = document.querySelector(".image-lightbox");
+    const lightboxImage = document.querySelector(".lightbox-image");
+    const closeButton = document.querySelector(".lightbox-close");
+
+    if (!grid || !lightbox || !lightboxImage || !closeButton) return;
+
+    function openLightbox(src, alt) {
+      lightboxImage.src = src;
+      lightboxImage.alt = alt || "";
+
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+
+      lightboxImage.src = "";
+      lightboxImage.alt = "";
+
+      document.body.style.overflow = "";
+    }
+
+    grid.addEventListener("click", function (event) {
+      const link = event.target.closest("a");
+      const image = event.target.closest("img");
+
+      if (!link || !image || !grid.contains(link)) return;
+
+      event.preventDefault();
+
+      openLightbox(link.href || image.currentSrc || image.src, image.alt);
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    window.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+        closeLightbox();
+      }
+    });
+  })();
+</script>
 <script>
   (function () {
     const layer = document.querySelector(".chain-layer");
