@@ -51,16 +51,16 @@ body {
   bottom: 18.8%;
   transform: translateX(-50%);
 
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
   font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
   font-weight: 200;
   font-size: clamp(38px, 4vw, 66px);
   line-height: 1;
   letter-spacing: 0;
-
-  color: black;
-  text-decoration: none;
-  white-space: nowrap;
-  cursor: pointer;
 
   transition: color 120ms ease;
 }
@@ -144,6 +144,7 @@ body {
   font-size: 20px;
   line-height: 1;
   font-weight: 200;
+
   transition: color 120ms ease;
 }
 
@@ -310,81 +311,109 @@ body {
   color: black;
 }
 
-/* 9. Work Dump */
+/* 9. Studio Dump */
 
 .dump-page {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
-  background: white;
+  background: #00D422;
 }
 
 .dump-stage {
   position: relative;
+  z-index: 2;
+
+  width: 100%;
   min-height: 100vh;
-  padding: 36px 36px 160px;
+  padding: 80px 48px 48px;
+
+  background: transparent;
 }
 
-.dump-background-gif {
-  position: fixed;
-  left: 0;
-  top: 0;
-
-  width: 100vw;
-  height: 100vh;
-
-  object-fit: cover;
-  object-position: center;
-
-  opacity: 0.65;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.dump-stage > *:not(.dump-background-gif) {
-  position: relative;
-  z-index: 1;
-}
-
+.dump-background-gif,
 .dump-header {
-  margin: 70px 0 70px;
-  text-align: center;
+  display: none;
 }
 
-.dump-header h1 {
-  margin: 0;
+.dump-page .back-link {
+  position: fixed;
+  left: 36px;
+  top: 36px;
+  z-index: 999999;
+
   color: black;
-  font-size: clamp(46px, 6vw, 110px);
-  line-height: 1;
+  text-decoration: none;
+  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif;
   font-weight: 200;
 }
 
+.dump-page .back-link:hover,
+.dump-page .back-link:focus-visible {
+  color: white;
+}
+
 .dump-grid {
+  position: relative;
+  z-index: 3;
+
   width: min(98vw, 1680px);
   margin: 0 auto;
+  padding: 0;
 
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-column-gap: 40px !important;
-row-gap: 18px !important;
+  grid-template-columns: repeat(5, 260px);
+  justify-content: space-between;
+  column-gap: 18px;
+  row-gap: 18px;
+
   align-items: start;
   grid-auto-flow: dense;
+
+  background: transparent;
 }
 
 .dump-item {
+  width: 260px;
+  height: 360px;
   margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 1;
+
+  overflow: visible;
+  background: #00D422;
+
   content-visibility: auto;
   contain-intrinsic-size: 260px 360px;
 }
 
 .dump-item a {
-  display: block;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dump-item img {
   display: block;
-  width: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  width: auto;
   height: auto;
-  max-height: 430px;
+
   object-fit: contain;
+  object-position: center center;
+  aspect-ratio: auto;
 }
 
 .dump-clickable-image {
@@ -396,56 +425,52 @@ row-gap: 18px !important;
   height: 1px;
 }
 
-/* brede, gecontroleerde collage-layout */
+/* 10. Studio Dump chains */
 
-.dump-layout-1 {
-  grid-column: 1 / span 4;
-  justify-self: start;
+.chain-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+  background: transparent;
 }
 
-.dump-layout-2 {
-  grid-column: 6 / span 4;
-  justify-self: center;
-  margin-top: 55px;
+.scroll-chain {
+  position: absolute;
+  top: -50vh;
+  bottom: -50vh;
+
+  width: 520px;
+
+  background-image: url("assets/chains/chain.png");
+  background-repeat: repeat-y;
+  background-position-x: center;
+  background-size: 520px auto;
+
+  opacity: 0.75;
+  outline: none;
+  background-color: transparent;
+
+  will-change: background-position;
 }
 
-.dump-layout-3 {
-  grid-column: 12 / span 4;
-  justify-self: end;
-  margin-top: 10px;
+.chain-left {
+  left: -180px;
+  background-position-y: var(--chain-left-y, 0px);
 }
 
-.dump-layout-4 {
-  grid-column: 3 / span 4;
-  justify-self: center;
-  margin-top: 20px;
+.chain-right {
+  right: -180px;
+  background-position-y: var(--chain-right-y, 0px);
 }
 
-.dump-layout-5 {
-  grid-column: 8 / span 5;
-  justify-self: center;
-  margin-top: -10px;
+.chain-middle {
+  display: none;
 }
 
-.dump-layout-6 {
-  grid-column: 13 / span 4;
-  justify-self: end;
-  margin-top: 45px;
-}
-
-.dump-layout-7 {
-  grid-column: 1 / span 5;
-  justify-self: start;
-  margin-top: 20px;
-}
-
-.dump-layout-8 {
-  grid-column: 9 / span 4;
-  justify-self: center;
-  margin-top: 60px;
-}
-
-/* 10. Work Dump lightbox */
+/* 11. Studio Dump lightbox */
 
 .image-lightbox {
   position: fixed;
@@ -503,7 +528,7 @@ row-gap: 18px !important;
   color: #00D422;
 }
 
-/* 11. Mobile general */
+/* 12. Mobile general */
 
 @media (max-width: 700px) {
   html,
@@ -519,8 +544,7 @@ row-gap: 18px !important;
 
   .content-stage,
   .project-stage,
-  .cv-stage,
-  .dump-stage {
+  .cv-stage {
     padding-left: 18px;
     padding-right: 18px;
   }
@@ -551,31 +575,6 @@ row-gap: 18px !important;
     margin-top: 64px;
   }
 
-  .dump-header {
-    margin: 90px 0 60px;
-  }
-
-  .dump-grid {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
-  }
-
-  .dump-item {
-    width: 100%;
-    margin-top: 0 !important;
-  }
-
-  .dump-item img {
-    width: 100%;
-    max-height: none;
-  }
-
-  .dump-background-gif {
-    opacity: 0.35;
-  }
-
   .image-lightbox {
     padding: 28px;
   }
@@ -591,681 +590,65 @@ row-gap: 18px !important;
     font-size: 38px;
   }
 }
-/* STUDIO DUMP RIGID GRID */
 
-.dump-page {
-  background: white;
-}
-
-.dump-page .dump-background-gif {
-  display: none;
-}
-
-.dump-page .dump-stage {
-  width: 100%;
-  min-height: 100vh;
-  padding: 80px 32px 32px;
-}
-
-.dump-page .dump-header {
-  display: none;
-}
-
-.dump-page .dump-grid {
-  width: min(98vw, 1680px);
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
-  padding: 0;
-  align-items: start;
-}
-
-.dump-page .dump-item {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-
-  content-visibility: auto;
-  contain-intrinsic-size: 260px 360px;
-}
-
-.dump-page .dump-item a {
-  display: block;
-}
-
-.dump-page .dump-item img {
-  width: 100%;
-  height: auto;
-  max-height: 430px;
-  display: block;
-  object-fit: contain;
-}
-
-/* tablet */
-@media (max-width: 900px) {
-  .dump-page .dump-stage {
-    padding: 70px 22px 22px;
-  }
-
-  .dump-page .dump-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-  }
-}
-
-/* phone */
-@media (max-width: 600px) {
-  .dump-page .dump-stage {
-    padding: 64px 14px 14px;
-  }
-
-  .dump-page .dump-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-}
-/* STUDIO DUMP — SMALLER CENTERED GRID OVERRIDE */
-
-.dump-page .dump-stage {
-  padding: 80px 48px 48px;
-}
-
-.dump-page .dump-grid {
-  max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto;
-
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-
-.dump-page .dump-item {
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  content-visibility: auto;
-  contain-intrinsic-size: 260px 360px;
-}
-
-.dump-page .dump-item img {
-  width: 100%;
-  height: auto;
-  max-height: 430px;
-  display: block;
-  object-fit: contain;
-  object-position: center;
-}
-/* BACK LINK ABOVE STUDIO DUMP GRID */
-
-.dump-page .back-link {
-  position: fixed !important;
-  left: 36px !important;
-  top: 36px !important;
-  z-index: 999999 !important;
-
-  color: black !important;
-  text-decoration: none !important;
-  font-family: "Zalando Sans SemiExpanded", Helvetica, Arial, sans-serif !important;
-  font-weight: 200 !important;
-}
-
-.dump-page .back-link:hover,
-.dump-page .back-link:focus-visible {
-  color: #00D422 !important;
-}
-
-.dump-page .dump-grid,
-.dump-page .dump-item,
-.dump-page .dump-item img {
-  position: relative;
-  z-index: 1;
-}
-/* STUDIO DUMP WORKING CHAINS — BEHIND GRID */
-
-.dump-page {
-  position: relative;
-  isolation: isolate;
-  background: white;
-}
-
-.chain-layer {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.scroll-chain {
-  position: absolute;
-  top: -10vh;
-  bottom: -10vh;
-
-  width: 110px;
-
-  background-image: url("assets/chains/chain.png");
-  background-repeat: repeat-y;
-  background-position-x: center;
-  background-position-y: var(--chain-side-y, 0px);
-  background-size: 86px auto;
-
-  opacity: 0.85;
-  will-change: background-position;
-}
-
-.chain-left {
-  left: 10vw;
-}
-
-.chain-middle {
-  left: 50%;
-  transform: translateX(-50%);
-  background-position-y: var(--chain-middle-y, 0px);
-}
-
-.chain-right {
-  right: 10vw;
-}
-
-/* grid stays in front of chains */
-.dump-page .dump-stage {
-  position: relative;
-  z-index: 2;
-}
-
-.dump-page .dump-grid {
-  position: relative;
-  z-index: 3;
-}
-
-/* back stays above everything */
-.dump-page .back-link {
-  z-index: 999999 !important;
-}
-
-/* phone */
-@media (max-width: 700px) {
-  .scroll-chain {
-    width: 70px;
-    background-size: 56px auto;
-    opacity: 0.65;
-  }
-
-  .chain-left {
-    left: 4vw;
-  }
-
-  .chain-right {
-    right: 4vw;
-  }
-}
-/* STUDIO DUMP — BIG BACKGROUND CHAINS */
-
-.chain-layer {
-  position: fixed;
-  inset: 0;
-  z-index: 0 !important;
-  pointer-events: none;
-  overflow: hidden;
-  background: transparent !important;
-}
-
-.scroll-chain {
-  position: absolute;
-  top: -50vh;
-  bottom: -50vh;
-
-  width: 520px;
-
-  background-image: url("assets/chains/chain.png");
-  background-repeat: repeat-y;
-  background-position-x: center;
-  background-size: 520px auto;
-
-  opacity: 0.75;
-  outline: none !important;
-  background-color: transparent !important;
-
-  will-change: background-position;
-}
-
-.chain-left {
-  left: -90px;
-  background-position-y: var(--chain-side-y, 0px);
-}
-
-.chain-middle {
-  left: 50%;
-  transform: translateX(-50%);
-  background-position-y: var(--chain-middle-y, 0px);
-}
-
-.chain-right {
-  right: -90px;
-  background-position-y: var(--chain-side-y, 0px);
-}
-
-/* photos stay in front */
-.dump-page .dump-stage {
-  position: relative;
-  z-index: 2;
-}
-
-.dump-page .dump-grid {
-  position: relative;
-  z-index: 3;
-}
-
-.dump-page .back-link {
-  z-index: 999999 !important;
-}
-/* STUDIO DUMP — TWO SIDE CHAINS */
-
-.chain-middle {
-  display: none !important;
-}
-
-.chain-left {
-  left: -180px;
-  background-position-y: var(--chain-left-y, 0px);
-}
-
-.chain-right {
-  right: -180px;
-  background-position-y: var(--chain-right-y, 0px);
-}
-/* STUDIO DUMP — MOVING SIDE CHAINS FIX */
-
-.chain-left {
-  background-position-y: var(--chain-left-y, 0px) !important;
-}
-
-.chain-right {
-  background-position-y: var(--chain-right-y, 0px) !important;
-}
-
-.chain-middle {
-  display: none !important;
-}
-/* STUDIO DUMP — GREEN BACKGROUND TEST */
-
-.dump-page {
-  background: #00D422 !important;
-}
-
-.dump-page .dump-stage {
-  background: transparent !important;
-}
-
-.dump-page .dump-grid {
-  background: transparent !important;
-}
-
-.dump-page .dump-item {
-  background: #00D422 !important;
-}
-
-.dump-page .back-link {
-  color: black !important;
-}
-
-.dump-page .back-link:hover,
-.dump-page .back-link:focus-visible {
-  color: white !important;
-}
-.dump-page .dump-item {
-  background: #00D422 !important;
-}
-.dump-grid {
-  width: min(98vw, 1680px);
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  column-gap: 28px;
-  row-gap: 58px;
-  align-items: start;
-  grid-auto-flow: dense;
-}
-
-.dump-item {
-  margin: 0;
-  grid-column: span 4;
-  content-visibility: auto;
-  contain-intrinsic-size: 260px 360px;
-}
-
-.dump-item a {
-  display: block;
-}
-
-.dump-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 430px;
-  object-fit: contain;
-  aspect-ratio: auto;
-}
-
-.dump-clickable-image {
-  cursor: none;
-}
-
-.studio-dump-sentinel {
-  grid-column: 1 / -1;
-  height: 1px;
-}
-/* FINAL STUDIO DUMP OVERRIDE — keep old grid, no square crops */
-
-.dump-page .dump-grid {
-  width: min(98vw, 1680px) !important;
-  margin: 0 auto !important;
-
-  display: grid !important;
-  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-  column-gap: 28px !important;
-  row-gap: 58px !important;
-  align-items: start !important;
-  grid-auto-flow: dense !important;
-
-  padding: 0 !important;
-}
-
-.dump-page .dump-item {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-
-  grid-column: auto !important;
-  grid-row: auto !important;
-
-  aspect-ratio: auto !important;
-  overflow: visible !important;
-  background: transparent !important;
-
-  content-visibility: auto;
-  contain-intrinsic-size: 260px 360px;
-}
-
-.dump-page .dump-item a {
-  display: block !important;
-}
-
-.dump-page .dump-item img {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: 430px !important;
-
-  object-fit: contain !important;
-  object-position: center !important;
-  aspect-ratio: auto !important;
-}
-
-.dump-page .studio-dump-sentinel {
-  grid-column: 1 / -1 !important;
-  height: 1px !important;
-}
-
-@media (max-width: 900px) {
-  .dump-page .dump-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    column-gap: 18px !important;
-    row-gap: 38px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .dump-page .dump-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    column-gap: 10px !important;
-    row-gap: 24px !important;
-  }
-}
-/* FINAL STUDIO DUMP OVERRIDE — old spacious grid feel */
-
-/* FINAL STUDIO DUMP OVERRIDE — larger natural images */
-
-.dump-page .dump-grid {
-  width: min(98vw, 1800px) !important;
-  margin: 0 auto !important;
-
-  display: grid !important;
-  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-
-  column-gap: 18px !important;
-  row-gap: 18px !important;
-
-  align-items: start !important;
-  grid-auto-flow: dense !important;
-  padding: 0 !important;
-}
-
-.dump-page .dump-item {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-
-  aspect-ratio: auto !important;
-  overflow: visible !important;
-  background: transparent !important;
-
-  content-visibility: auto;
-  contain-intrinsic-size: 320px 420px;
-}
-
-.dump-page .dump-item a {
-  display: block !important;
-}
-
-.dump-page .dump-item img {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: 560px !important;
-
-  object-fit: contain !important;
-  object-position: center !important;
-  aspect-ratio: auto !important;
-}
-
-.dump-page .studio-dump-sentinel {
-  grid-column: 1 / -1 !important;
-  height: 1px !important;
-}
-
-/* tablet */
-@media (max-width: 900px) {
-  .dump-page .dump-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    column-gap: 14px !important;
-    row-gap: 18px !important;
-  }
-}
-
-/* phone */
-@media (max-width: 600px) {
-  .dump-page .dump-stage {
-    padding: 64px 14px 14px !important;
-  }
-
-  .dump-page .dump-grid {
-    grid-template-columns: 1fr !important;
-    column-gap: 0 !important;
-    row-gap: 22px !important;
-  }
-
-  .dump-page .dump-item img {
-    max-height: none !important;
-  }
-}
-/* STUDIO DUMP — OLD 5 COLUMN PORTRAIT RHYTHM */
-
-.dump-page .dump-grid {
-  width: min(98vw, 1680px) !important;
-  margin: 0 auto !important;
-
-  display: grid !important;
-  grid-template-columns: repeat(5, 260px) !important;
-  justify-content: space-between !important;
-
-  column-gap: 18px !important;
-  row-gap: 18px !important;
-
-  align-items: start !important;
-  grid-auto-flow: dense !important;
-  padding: 0 !important;
-}
-
-.dump-page .dump-item {
-  width: 260px !important;
-  height: 360px !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  overflow: visible !important;
-  background: transparent !important;
-
-  content-visibility: auto;
-  contain-intrinsic-size: 260px 360px;
-}
-
-.dump-page .dump-item a {
-  width: 100% !important;
-  height: 100% !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.dump-page .dump-item img {
-  display: block !important;
-
-  max-width: 100% !important;
-  max-height: 100% !important;
-
-  width: auto !important;
-  height: auto !important;
-
-  object-fit: contain !important;
-  object-position: center center !important;
-  aspect-ratio: auto !important;
-}
-
-.dump-page .studio-dump-sentinel {
-  grid-column: 1 / -1 !important;
-  height: 1px !important;
-}
-/* STUDIO DUMP — MOBILE ONE IMAGE WIDE */
-
-@media (max-width: 600px) {
-  .dump-page .dump-stage {
-    padding: 64px 14px 24px !important;
-  }
-
-  .dump-page .dump-grid {
-    width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-    justify-content: initial !important;
-  }
-
-  .dump-page .dump-item {
-    width: 100% !important;
-    height: auto !important;
-
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .dump-page .dump-item a {
-    width: 100% !important;
-    height: auto !important;
-
-    display: block !important;
-  }
-
-  .dump-page .dump-item img {
-    width: 100% !important;
-    height: auto !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    display: block !important;
-    object-fit: contain !important;
-    object-position: center !important;
-  }
-}
-/* STUDIO DUMP — PHONE TRUE SINGLE COLUMN FIX */
+/* 13. Studio Dump mobile */
 
 @media (max-width: 700px) {
-  .dump-page .dump-stage {
-    padding: 64px 14px 24px !important;
-    width: 100% !important;
-    overflow-x: hidden !important;
+  .dump-stage {
+    width: 100%;
+    padding: 64px 14px 24px;
+    overflow-x: hidden;
   }
 
-  .dump-page .dump-grid {
-    width: 100% !important;
-    max-width: none !important;
+  .dump-grid {
+    width: 100%;
+    max-width: none;
 
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    justify-content: initial !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: initial;
 
-    column-gap: 0 !important;
-    row-gap: 24px !important;
+    column-gap: 0;
+    row-gap: 24px;
 
-    overflow: visible !important;
+    overflow: visible;
   }
 
-  .dump-page .dump-item {
-    width: 100% !important;
-    height: auto !important;
+  .dump-item {
+    width: 100%;
+    height: auto;
 
-    grid-column: auto !important;
-    grid-row: auto !important;
+    grid-column: auto;
+    grid-row: auto;
 
-    display: block !important;
+    display: block;
 
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
 
-    overflow: visible !important;
+    overflow: visible;
   }
 
-  .dump-page .dump-item a {
-    width: 100% !important;
-    height: auto !important;
+  .dump-item a {
+    width: 100%;
+    height: auto;
 
-    display: block !important;
+    display: block;
   }
 
-  .dump-page .dump-item img {
-    width: 100% !important;
-    height: auto !important;
+  .dump-item img {
+    width: 100%;
+    height: auto;
 
-    max-width: 100% !important;
-    max-height: none !important;
+    max-width: 100%;
+    max-height: none;
 
-    display: block !important;
-    object-fit: contain !important;
-    object-position: center center !important;
+    display: block;
+    object-fit: contain;
+    object-position: center center;
   }
 
-  .dump-page .studio-dump-sentinel {
-    grid-column: 1 / -1 !important;
+  .studio-dump-sentinel {
+    grid-column: 1 / -1;
   }
 }
