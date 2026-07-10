@@ -1165,3 +1165,107 @@ row-gap: 18px !important;
   grid-column: 1 / -1 !important;
   height: 1px !important;
 }
+/* STUDIO DUMP — MOBILE ONE IMAGE WIDE */
+
+@media (max-width: 600px) {
+  .dump-page .dump-stage {
+    padding: 64px 14px 24px !important;
+  }
+
+  .dump-page .dump-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    justify-content: initial !important;
+  }
+
+  .dump-page .dump-item {
+    width: 100% !important;
+    height: auto !important;
+
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .dump-page .dump-item a {
+    width: 100% !important;
+    height: auto !important;
+
+    display: block !important;
+  }
+
+  .dump-page .dump-item img {
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    display: block !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+/* STUDIO DUMP — PHONE TRUE SINGLE COLUMN FIX */
+
+@media (max-width: 700px) {
+  .dump-page .dump-stage {
+    padding: 64px 14px 24px !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .dump-page .dump-grid {
+    width: 100% !important;
+    max-width: none !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-content: initial !important;
+
+    column-gap: 0 !important;
+    row-gap: 24px !important;
+
+    overflow: visible !important;
+  }
+
+  .dump-page .dump-item {
+    width: 100% !important;
+    height: auto !important;
+
+    grid-column: auto !important;
+    grid-row: auto !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+  }
+
+  .dump-page .dump-item a {
+    width: 100% !important;
+    height: auto !important;
+
+    display: block !important;
+  }
+
+  .dump-page .dump-item img {
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: 100% !important;
+    max-height: none !important;
+
+    display: block !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .dump-page .studio-dump-sentinel {
+    grid-column: 1 / -1 !important;
+  }
+}
