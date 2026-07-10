@@ -1,54 +1,81 @@
-const studioDumpGrid = document.querySelector(".dump-grid");
-const studioDumpImages = window.studioDumpImages || [];
+const grid = document.querySelector(".dump-grid");
 
-if (studioDumpGrid) {
-  studioDumpImages.forEach((src, index) => {
-    const item = document.createElement("figure");
-    item.className = `dump-item dump-layout-${(index % 8) + 1}`;
+const batchSize = 36;
+let currentIndex = 0;
+let observer = null;
 
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = "";
-    img.loading = "lazy";
-    img.className = "dump-clickable-image";
+function normalizeItem(item) {
+  if (typeof item === "string") {
+    return {
+      thumb: item,
+      full: item,
+      width: null,
+      height: null
+    };
+  }
 
-    item.appendChild(img);
-    studioDumpGrid.appendChild(item);
-  });
+  return item;
 }
 
-const lightbox = document.createElement("div");
-lightbox.className = "image-lightbox";
-lightbox.innerHTML = `
-  <button class="image-lightbox-close" aria-label="Close">×</button>
-  <img src="" alt="">
-`;
+function createStudioDumpItem(rawItem, globalIndex) {
+  const item = normalizeItem(rawItem);
 
-document.body.appendChild(lightbox);
+  const figure = document.createElement("figure");
+  figure.className = "dump-item";
 
-const lightboxImage = lightbox.querySelector("img");
-const closeButton = lightbox.querySelector(".image-lightbox-close");
+  const link = document.createElement("a");
+  link.href = item.full || item.thumb;
+  link.target = "_blank";
+  link.rel = "noopener";
 
-document.addEventListener("click", (event) => {
-  const clickedImage = event.target.closest(".dump-clickable-image");
+  const img = document.createElement("img");
+  img.src = item.thumb || item.full;
+  img.alt = "";
+  img.loading = globalIndex < 16 ? "eager" : "lazy";
+  img.decoding = "async";
 
-  if (clickedImage) {
-    lightboxImage.src = clickedImage.src;
-    lightbox.classList.add("is-open");
+
+  link.appendChild(img);
+  figure.appendChild(link);
+
+  return figure;
+}
+
+function renderBatch() {
+  if (!grid || !Array.isArray(STUDIO_DUMP_IMAGES)) return;
+
+  const batch = STUDIO_DUMP_IMAGES.slice(currentIndex, currentIndex + batchSize);
+  const fragment = document.createDocumentFragment();
+
+  batch.forEach((item, index) => {
+    fragment.appendChild(createStudioDumpItem(item, currentIndex + index));
+  });
+
+  grid.appendChild(fragment);
+  currentIndex += batch.length;
+
+  if (currentIndex >= STUDIO_DUMP_IMAGES.length && observer) {
+    observer.disconnect();
   }
+}
 
-  if (
-    event.target === lightbox ||
-    event.target === closeButton
-  ) {
-    lightbox.classList.remove("is-open");
-    lightboxImage.src = "";
-  }
-});
+if (grid && Array.isArray(STUDIO_DUMP_IMAGES)) {
+  renderBatch();
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    lightbox.classList.remove("is-open");
-    lightboxImage.src = "";
-  }
-});
+  const sentinel = document.createElement("div");
+  sentinel.className = "studio-dump-sentinel";
+  grid.after(sentinel);
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        renderBatch();
+      }
+    },
+    {
+      rootMargin: "900px"
+    }
+  );
+
+  observer.observe(sentinel);
+}
