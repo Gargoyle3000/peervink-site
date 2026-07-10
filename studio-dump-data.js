@@ -240,9 +240,213 @@ const STUDIO_DUMP_IMAGES = [
     "height": 700
   },
   {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250516-130607634.webp",
+    "full": "assets/studio-dump/full/pxl-20250516-130607634.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250516-102955013.webp",
+    "full": "assets/studio-dump/full/pxl-20250516-102955013.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250516-013724632.webp",
+    "full": "assets/studio-dump/full/pxl-20250516-013724632.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250516-010127089.webp",
+    "full": "assets/studio-dump/full/pxl-20250516-010127089.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250514-235815064.webp",
+    "full": "assets/studio-dump/full/pxl-20250514-235815064.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250504-101205461.webp",
+    "full": "assets/studio-dump/full/pxl-20250504-101205461.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250427-074813359.webp",
+    "full": "assets/studio-dump/full/pxl-20250427-074813359.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250426-092003094.webp",
+    "full": "assets/studio-dump/full/pxl-20250426-092003094.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250424-134140093.webp",
+    "full": "assets/studio-dump/full/pxl-20250424-134140093.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250421-061808298.webp",
+    "full": "assets/studio-dump/full/pxl-20250421-061808298.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250414-093203954.webp",
+    "full": "assets/studio-dump/full/pxl-20250414-093203954.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250412-145918459.webp",
+    "full": "assets/studio-dump/full/pxl-20250412-145918459.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250409-125622588.webp",
+    "full": "assets/studio-dump/full/pxl-20250409-125622588.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250409-031945458.webp",
+    "full": "assets/studio-dump/full/pxl-20250409-031945458.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250409-022958657.webp",
+    "full": "assets/studio-dump/full/pxl-20250409-022958657.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250301-165209222.webp",
+    "full": "assets/studio-dump/full/pxl-20250301-165209222.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250213-002508098.webp",
+    "full": "assets/studio-dump/full/pxl-20250213-002508098.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250104-173308294.webp",
+    "full": "assets/studio-dump/full/pxl-20250104-173308294.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250102-115307842.webp",
+    "full": "assets/studio-dump/full/pxl-20250102-115307842.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250102-113347652.webp",
+    "full": "assets/studio-dump/full/pxl-20250102-113347652.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20241121-153121108.webp",
+    "full": "assets/studio-dump/full/pxl-20241121-153121108.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
     "thumb": "assets/studio-dump/thumbs/pxl-20241111-201443810-4.webp",
     "full": "assets/studio-dump/full/pxl-20241111-201443810-4.webp",
     "width": 525,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20241111-125903106.webp",
+    "full": "assets/studio-dump/full/pxl-20241111-125903106.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20241106-135154479.webp",
+    "full": "assets/studio-dump/full/pxl-20241106-135154479.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20241031-124650845.webp",
+    "full": "assets/studio-dump/full/pxl-20241031-124650845.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20241021-120720687.webp",
+    "full": "assets/studio-dump/full/pxl-20241021-120720687.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20241012-195805145.webp",
+    "full": "assets/studio-dump/full/pxl-20241012-195805145.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240921-195223814.webp",
+    "full": "assets/studio-dump/full/pxl-20240921-195223814.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240812-135322256.webp",
+    "full": "assets/studio-dump/full/pxl-20240812-135322256.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240804-082333887.webp",
+    "full": "assets/studio-dump/full/pxl-20240804-082333887.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240727-134255283.webp",
+    "full": "assets/studio-dump/full/pxl-20240727-134255283.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240727-114125463.webp",
+    "full": "assets/studio-dump/full/pxl-20240727-114125463.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240610-155550852.webp",
+    "full": "assets/studio-dump/full/pxl-20240610-155550852.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240604-053745389.webp",
+    "full": "assets/studio-dump/full/pxl-20240604-053745389.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240517-174737494.webp",
+    "full": "assets/studio-dump/full/pxl-20240517-174737494.webp",
+    "width": 526,
     "height": 700
   },
   {

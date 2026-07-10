@@ -13,6 +13,17 @@ function normalizeItem(item) {
   return item;
 }
 
+function shuffleItems(items) {
+  const shuffled = [...items];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[i]];
+  }
+
+  return shuffled;
+}
+
 function createStudioDumpItem(rawItem, globalIndex) {
   const item = normalizeItem(rawItem);
 
@@ -39,8 +50,9 @@ function renderStudioDump() {
   if (!grid || !Array.isArray(STUDIO_DUMP_IMAGES)) return;
 
   const fragment = document.createDocumentFragment();
+  const randomizedImages = shuffleItems(STUDIO_DUMP_IMAGES);
 
-  STUDIO_DUMP_IMAGES.forEach((item, index) => {
+  randomizedImages.forEach((item, index) => {
     fragment.appendChild(createStudioDumpItem(item, index));
   });
 
