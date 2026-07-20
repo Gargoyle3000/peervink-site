@@ -1,5 +1,215 @@
 const STUDIO_DUMP_IMAGES = [
   {
+    "thumb": "assets/studio-dump/thumbs/untitled-artwork.webp",
+    "full": "assets/studio-dump/full/untitled-artwork.webp",
+    "width": 567,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/untitled-artwork-a6f7f2.webp",
+    "full": "assets/studio-dump/full/untitled-artwork-a6f7f2.webp",
+    "width": 700,
+    "height": 525
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250521-200812364.webp",
+    "full": "assets/studio-dump/full/pxl-20250521-200812364.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250414-080708894.webp",
+    "full": "assets/studio-dump/full/pxl-20250414-080708894.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20250319-100950040.webp",
+    "full": "assets/studio-dump/full/pxl-20250319-100950040.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20241129-191740223.webp",
+    "full": "assets/studio-dump/full/pxl-20241129-191740223.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240831-174412869.webp",
+    "full": "assets/studio-dump/full/pxl-20240831-174412869.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240612-130837448.webp",
+    "full": "assets/studio-dump/full/pxl-20240612-130837448.webp",
+    "width": 700,
+    "height": 526
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240603-100211195.webp",
+    "full": "assets/studio-dump/full/pxl-20240603-100211195.webp",
+    "width": 700,
+    "height": 526
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240528-101655673.webp",
+    "full": "assets/studio-dump/full/pxl-20240528-101655673.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240317-004741841.webp",
+    "full": "assets/studio-dump/full/pxl-20240317-004741841.webp",
+    "width": 700,
+    "height": 526
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20240111-174553623.webp",
+    "full": "assets/studio-dump/full/pxl-20240111-174553623.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20231025-154425862-night.webp",
+    "full": "assets/studio-dump/full/pxl-20231025-154425862-night.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20231002-220437039.webp",
+    "full": "assets/studio-dump/full/pxl-20231002-220437039.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20231002-194442239.webp",
+    "full": "assets/studio-dump/full/pxl-20231002-194442239.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20231002-033303589.webp",
+    "full": "assets/studio-dump/full/pxl-20231002-033303589.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20231001-002837119.webp",
+    "full": "assets/studio-dump/full/pxl-20231001-002837119.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230930-212254591.webp",
+    "full": "assets/studio-dump/full/pxl-20230930-212254591.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230929-211200701.webp",
+    "full": "assets/studio-dump/full/pxl-20230929-211200701.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230926-152354480.webp",
+    "full": "assets/studio-dump/full/pxl-20230926-152354480.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230925-184034062.webp",
+    "full": "assets/studio-dump/full/pxl-20230925-184034062.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230925-080317904.webp",
+    "full": "assets/studio-dump/full/pxl-20230925-080317904.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230905-130512167.webp",
+    "full": "assets/studio-dump/full/pxl-20230905-130512167.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230903-092242264-mp.webp",
+    "full": "assets/studio-dump/full/pxl-20230903-092242264-mp.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230830-094641485.webp",
+    "full": "assets/studio-dump/full/pxl-20230830-094641485.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230829-101142423-mp.webp",
+    "full": "assets/studio-dump/full/pxl-20230829-101142423-mp.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230829-095504037-2.webp",
+    "full": "assets/studio-dump/full/pxl-20230829-095504037-2.webp",
+    "width": 700,
+    "height": 519
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230829-094939641.webp",
+    "full": "assets/studio-dump/full/pxl-20230829-094939641.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230827-095747074-2.webp",
+    "full": "assets/studio-dump/full/pxl-20230827-095747074-2.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230827-095433915.webp",
+    "full": "assets/studio-dump/full/pxl-20230827-095433915.webp",
+    "width": 526,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230421-153247312.webp",
+    "full": "assets/studio-dump/full/pxl-20230421-153247312.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230216-134926728.webp",
+    "full": "assets/studio-dump/full/pxl-20230216-134926728.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230215-103009169.webp",
+    "full": "assets/studio-dump/full/pxl-20230215-103009169.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230215-102939118.webp",
+    "full": "assets/studio-dump/full/pxl-20230215-102939118.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20230119-124735174.webp",
+    "full": "assets/studio-dump/full/pxl-20230119-124735174.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
     "thumb": "assets/studio-dump/thumbs/pxl-20251219-142143307.webp",
     "full": "assets/studio-dump/full/pxl-20251219-142143307.webp",
     "width": 526,
