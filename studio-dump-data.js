@@ -24,6 +24,12 @@ const STUDIO_DUMP_IMAGES = [
     "height": 700
   },
   {
+    "thumb": "assets/studio-dump/thumbs/pxl-20260622-113426405.webp",
+    "full": "assets/studio-dump/full/pxl-20260622-113426405.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
     "thumb": "assets/studio-dump/thumbs/pxl-20250521-200812364.webp",
     "full": "assets/studio-dump/full/pxl-20250521-200812364.webp",
     "width": 526,
@@ -218,12 +224,6 @@ const STUDIO_DUMP_IMAGES = [
   {
     "thumb": "assets/studio-dump/thumbs/pxl-20230119-124735174.webp",
     "full": "assets/studio-dump/full/pxl-20230119-124735174.webp",
-    "width": 525,
-    "height": 700
-  },
-  {
-    "thumb": "assets/studio-dump/thumbs/pxl-20260622-113426405.webp",
-    "full": "assets/studio-dump/full/pxl-20260622-113426405.webp",
     "width": 525,
     "height": 700
   },
