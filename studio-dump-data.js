@@ -12,6 +12,18 @@ const STUDIO_DUMP_IMAGES = [
     "height": 525
   },
   {
+    "thumb": "assets/studio-dump/thumbs/pxl-20260724-140929536.webp",
+    "full": "assets/studio-dump/full/pxl-20260724-140929536.webp",
+    "width": 700,
+    "height": 525
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20260722-093339260.webp",
+    "full": "assets/studio-dump/full/pxl-20260722-093339260.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
     "thumb": "assets/studio-dump/thumbs/pxl-20250521-200812364.webp",
     "full": "assets/studio-dump/full/pxl-20250521-200812364.webp",
     "width": 526,
