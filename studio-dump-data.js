@@ -222,6 +222,12 @@ const STUDIO_DUMP_IMAGES = [
     "height": 700
   },
   {
+    "thumb": "assets/studio-dump/thumbs/pxl-20260622-113426405.webp",
+    "full": "assets/studio-dump/full/pxl-20260622-113426405.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
     "thumb": "assets/studio-dump/thumbs/pxl-20251219-142143307.webp",
     "full": "assets/studio-dump/full/pxl-20251219-142143307.webp",
     "width": 526,
