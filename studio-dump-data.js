@@ -12,6 +12,30 @@ const STUDIO_DUMP_IMAGES = [
     "height": 525
   },
   {
+    "thumb": "assets/studio-dump/thumbs/screenshot-20260725-231149.webp",
+    "full": "assets/studio-dump/full/screenshot-20260725-231149.webp",
+    "width": 312,
+    "height": 700
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/screenshot-20260418-234841-2.webp",
+    "full": "assets/studio-dump/full/screenshot-20260418-234841-2.webp",
+    "width": 700,
+    "height": 502
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/rdt-20260108-2139035525483154673711252.webp",
+    "full": "assets/studio-dump/full/rdt-20260108-2139035525483154673711252.webp",
+    "width": 700,
+    "height": 393
+  },
+  {
+    "thumb": "assets/studio-dump/thumbs/pxl-20260725-125627223.webp",
+    "full": "assets/studio-dump/full/pxl-20260725-125627223.webp",
+    "width": 525,
+    "height": 700
+  },
+  {
     "thumb": "assets/studio-dump/thumbs/pxl-20260724-140929536.webp",
     "full": "assets/studio-dump/full/pxl-20260724-140929536.webp",
     "width": 700,
