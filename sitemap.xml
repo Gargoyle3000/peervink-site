@@ -6,10 +6,6 @@
   </url>
 
   <url>
-    <loc>https://peervink.net/home.html</loc>
-  </url>
-
-  <url>
     <loc>https://peervink.net/selected-works.html</loc>
   </url>
 
@@ -47,6 +43,10 @@
 
 <url>
   <loc>https://peervink.net/add-to-cart-ii.html</loc>
+</url>
+
+<url>
+  <loc>https://peervink.net/cv.html</loc>
 </url>
 
 </urlset>

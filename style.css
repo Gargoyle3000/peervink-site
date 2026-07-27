@@ -686,7 +686,7 @@ body {
 
 /* Mobiel: tekst terug in de normale pagina */
 @media (max-width: 700px) {
-  .project-info {
+  body.project-page .project-info {
     position: static;
 
     width: min(88vw, 620px);
@@ -699,7 +699,22 @@ body {
     line-height: 1.5;
   }
 
-  .project-info .project-details {
+  body.project-page .project-info .project-details {
     font-size: 14px;
   }
+}
+
+/* PROJECT INFO LINKS — desktop en mobiel */
+body.project-page .project-info a,
+body.project-page .project-info a:link,
+body.project-page .project-info a:visited {
+  color: #000000 !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.project-page .project-info a:hover,
+body.project-page .project-info a:focus-visible,
+body.project-page .project-info a:active {
+  color: #00D422 !important;
 }
