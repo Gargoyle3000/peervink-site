@@ -100,17 +100,19 @@ width: min(28vw, 325px);
   }
 
   .intro-artwork {
-    width: min(56vw, 240px);
-    max-height: 52vh;
+    width: min(72vw, 325px);
+    max-height: 56vh;
+    height: auto;
+    transform: translateX(2.3%);
   }
 
   .intro-logo {
-    width: min(64vw, 270px);
-    margin-top: 16px;
+    width: min(69vw, 310px);
+    margin-top: 14px;
   }
 
   .enter-link {
-    margin-top: 10px;
+    margin-top: 9px;
     font-size: clamp(18px, 5vw, 23px);
   }
 }
