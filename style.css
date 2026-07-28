@@ -961,3 +961,31 @@ body.project-page.project-layout-new .project-title .project-year {
     font-size: 14px;
   }
 }
+/* SELECTED WORKS — schaalt mee met browserhoogte en breedte */
+
+.project-list {
+  min-height: calc(100svh - 72px);
+  gap: clamp(10px, 2.2svh, 28px);
+}
+
+.project-list a {
+  width: 100%;
+
+  font-size: clamp(28px, min(5vw, 7svh), 86px);
+  line-height: 0.92;
+  text-align: center;
+}
+
+/* Selected Works — telefoon */
+
+@media (max-width: 700px) {
+  .project-list {
+    min-height: calc(100svh - 72px);
+    gap: clamp(7px, 1.4svh, 13px);
+  }
+
+  .project-list a {
+    font-size: clamp(18px, min(7vw, 4.4svh), 32px);
+    line-height: 0.92;
+  }
+}
