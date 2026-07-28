@@ -647,6 +647,49 @@ width: min(28vw, 325px);
   }
 }
 
+/* Studio Dump — kleinere desktops en tablets */
+
+/* Kleinere desktop / grote iPad liggend: 4 kolommen */
+@media (min-width: 1160px) and (max-width: 1499px) {
+  .dump-stage {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dump-grid {
+    width: min(100%, 1094px);
+    grid-template-columns: repeat(4, 260px);
+    justify-content: start;
+  }
+}
+
+/* iPad liggend: 3 kolommen */
+@media (min-width: 901px) and (max-width: 1159px) {
+  .dump-stage {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dump-grid {
+    width: min(100%, 816px);
+    grid-template-columns: repeat(3, 260px);
+    justify-content: start;
+  }
+}
+
+/* iPad staand: 2 kolommen */
+@media (min-width: 701px) and (max-width: 900px) {
+  .dump-stage {
+    padding: 72px 32px 36px;
+  }
+
+  .dump-grid {
+    width: min(100%, 538px);
+    grid-template-columns: repeat(2, 260px);
+    justify-content: start;
+  }
+}
+
 /* 13. Studio Dump mobile */
 
 @media (max-width: 700px) {
